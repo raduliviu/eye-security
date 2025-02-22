@@ -21,11 +21,17 @@ describe('DetectionsTable component', async () => {
 
   it('Should render error state', async () => {
     const mockError = new Error('Failed to fetch detections');
-    mockError.name = 'FetchError';
+    mockError.name = 'TestError';
 
     vi.mocked(getDetections).mockRejectedValueOnce(mockError);
 
     const { getByText } = renderWithQueryClient(<DetectionsTable />);
+
+    await expect.element(getByText('TestError')).toBeInTheDocument();
+
+    await expect
+      .element(getByText('Failed to fetch detections'))
+      .toBeInTheDocument();
 
     await expect
       .element(getByText('Please try refreshing the page'))
