@@ -7,13 +7,4 @@ export const theme = createTheme({
   palette: {
     mode: 'dark',
   },
-  // components: {
-  //   MuiCssBaseline: {
-  //     styleOverrides: {
-  //       body: {
-  //         color: '#fff',
-  //       },
-  //     },
-  //   },
-  // },
 });
