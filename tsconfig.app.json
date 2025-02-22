@@ -21,7 +21,12 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "types": ["vitest/globals", "vitest/importMeta"]
+    "types": [
+      "vitest/globals",
+      "vitest/importMeta",
+      "@vitest/browser/providers/playwright",
+      "@vitest/browser/matchers"
+    ]
   },
   "include": ["src"]
 }

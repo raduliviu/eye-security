@@ -10,5 +10,13 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    browser: {
+      enabled: true,
+      provider: 'playwright',
+      // https://vitest.dev/guide/browser/playwright
+      instances: [{ browser: 'chromium' }],
+      headless: true,
+      screenshotFailures: false,
+    },
   },
 });
