@@ -18,7 +18,7 @@ export const DetectionsTable = () => {
   });
 
   const { data, isLoading, error } = useQuery({
-    queryKey: ['detections', paginationModel],
+    queryKey: ['detections'],
     queryFn: getDetections,
     // Made it to not retry failed queries so that you can more easily see the error state
     retry: false,
